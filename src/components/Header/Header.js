@@ -1,8 +1,7 @@
 import React from "react";
-import logo from "../logo.svg";
 import "./Header.css";
 
-const Header = () => (
+const Header = ({ logo }) => (
   <header className="App-header">
     <img src={logo} classNmae="App-logo" alt="logo" />
     <p>
