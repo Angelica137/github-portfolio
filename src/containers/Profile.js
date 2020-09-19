@@ -1,7 +1,16 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import Link from "../components/Link/Link";
 import List from "../components/List/List";
-import "./Profile.css";
+
+const ProfileWrapper = styled.div`
+  width: 50%;
+  margin: 10px auto;
+`;
+
+const Avatar = styled.img`
+  width: 150px;
+`;
 
 class Profile extends Component {
   constructor() {
@@ -41,10 +50,10 @@ class Profile extends Component {
       { label: "bio", value: data.bio },
     ];
     return (
-      <div className="Profile-container">
-        <img className="Profile-avatar" src={data.avatar_url} alt="avatar" />
+      <ProfileWrapper>
+        <Avatar src={data.avatar_url} alt="avatar" />
         <List items={items} />
-      </div>
+      </ProfileWrapper>
     );
   }
 }
